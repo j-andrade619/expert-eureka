@@ -19,7 +19,6 @@ h1 {
     margin: auto;
     align-content: center;
     opacity: 0.8;
-    position: relative;
 }
 
 #right-side-up-triangle {
@@ -31,6 +30,7 @@ h1 {
     height: 0;
     width: 0;
 }
+
 #inside-r-side-up {
     margin: auto;
     padding-top: 75px;
@@ -40,16 +40,20 @@ h1 {
     height: 0;
     width: 0;
 }
+
 #upside-down-triangle {
+    position: relative;
     display: flex;
-    justify-content: center;
     border-top: 200px solid red;
     border-left: 100px solid transparent;
     border-right: 100px solid transparent;
     height: 0;
     width: 0;
+
 }
+
 #inside-u-side-down {
+    position: absolute;
     margin: auto;
     padding-top: 75px;
     border-top: 100px solid green;
@@ -58,3 +62,4 @@ h1 {
     height: 0;
     width: 0;
 }
+
