@@ -1,0 +1,60 @@
+html {
+    background: url(/Documents/pexels-jerome031-2114365.png);
+    background-size: cover;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 100px;
+}
+
+#drum-machine {
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+    border: 2px solid black;
+    width: 1200px;
+    height: 750px;
+    margin: auto;
+    align-content: center;
+    opacity: 0.8;
+    position: relative;
+}
+
+#right-side-up-triangle {
+    display: flex;
+    justify-content: center;
+    border-bottom: 200px solid red;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    height: 0;
+    width: 0;
+}
+#inside-r-side-up {
+    margin: auto;
+    padding-top: 75px;
+    border-bottom: 100px solid green;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    height: 0;
+    width: 0;
+}
+#upside-down-triangle {
+    display: flex;
+    justify-content: center;
+    border-top: 200px solid red;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    height: 0;
+    width: 0;
+}
+#inside-u-side-down {
+    margin: auto;
+    padding-top: 75px;
+    border-top: 100px solid green;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    height: 0;
+    width: 0;
+}
