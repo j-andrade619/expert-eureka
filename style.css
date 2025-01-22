@@ -3,13 +3,15 @@ html {
     background-size: cover;
 }
 
+
 h1 {
+
     color: white;
     text-align: center;
     font-size: 100px;
 }
 
-#drum-machine {
+.drum-machine {
     display: flex;
     justify-content: center;
     background-color: blue;
@@ -17,49 +19,58 @@ h1 {
     width: 1200px;
     height: 750px;
     margin: auto;
-    align-content: center;
     opacity: 0.8;
+    padding: 50px;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
 }
 
-#right-side-up-triangle {
+.right-side-up-triangle {
     display: flex;
     justify-content: center;
-    border-bottom: 200px solid red;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    height: 0;
-    width: 0;
-}
-
-#inside-r-side-up {
-    margin: auto;
-    padding-top: 75px;
-    border-bottom: 100px solid green;
+    border-bottom: 100px solid red;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     height: 0;
     width: 0;
+    margin-bottom: 20px;
 }
 
-#upside-down-triangle {
-    position: relative;
-    display: flex;
-    border-top: 200px solid red;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    height: 0;
-    width: 0;
-
-}
-
-#inside-u-side-down {
-    position: absolute;
+.inside-r-side-up {
     margin: auto;
-    padding-top: 75px;
-    border-top: 100px solid green;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
+    padding-top: 32px;
+    border-bottom: 50px solid green;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
     height: 0;
     width: 0;
 }
+
+.upside-down-triangle {
+    position: relative; /* Allows absolute positioning for child */
+    width: 0; /* Essential for maintaining triangle shape */
+    height: 0; /* Essential for maintaining triangle shape */
+    border-top: 100px solid yellow; /* Height of the larger triangle */
+    border-left: 50px solid transparent; /* Half of the base width */
+    border-right: 50px solid transparent; /* Half of the base width */
+}
+
+.inside-u-side-down {
+    position: absolute; /* Position relative to the parent */
+    transform: translate(-50%, -100%); /* Center horizontally and vertically */
+    border-top: 50px solid greenyellow; /* Height of the smaller triangle */
+    border-left: 25px solid transparent; /* Half of the base width */
+    border-right: 25px solid transparent; /* Half of the base width */
+    padding-bottom: 32px;
+    margin: auto;
+}
+
+.second-column{
+    justify-content: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 50px;
+  }
 
