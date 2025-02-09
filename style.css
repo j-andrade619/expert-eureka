@@ -63,13 +63,14 @@ h1 {
 
 .inside-u-side-down {
     display: flex;
-    position: absolute; /* Position relative to the parent */
+    position: absolute;
     transform: translate(-50%, -100%); /* Center horizontally and vertically */
     border-top: 50px solid greenyellow; /* Height of the smaller triangle */
     border-left: 25px solid transparent; /* Half of the base width */
     border-right: 25px solid transparent; /* Half of the base width */
     padding-bottom: 32px;
     margin: auto;
+    text-align: center;
 }
 
 .second-column{
@@ -78,11 +79,4 @@ h1 {
     padding-right: 5px;
     margin-top: 50px;
   }
-p{
-    display: flex;
-    justify-content: center;
-    font-size: 25px;
-    color: white;
-    margin-top: 15px;
-    text-align: center;
-}
+
