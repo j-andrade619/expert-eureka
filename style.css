@@ -96,6 +96,7 @@ h1 {
 }
 
 .reg-font {
+    display: flex;
     margin: 0;
     justify-self: center;
     padding-top: 20px;
