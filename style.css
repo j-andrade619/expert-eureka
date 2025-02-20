@@ -3,11 +3,12 @@ html {
     background-size: cover;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
+
 h1 {
 
     color: white;
@@ -23,6 +24,7 @@ h1 {
     opacity: 0.8;
     padding: 325px;
 }
+
 .flex-column {
     display: flex;
     flex-direction: column;
@@ -50,6 +52,7 @@ h1 {
     height: 0;
     width: 0;
 }
+
 .upside-down-triangle {
     display: flex;
     position: relative;
@@ -69,24 +72,30 @@ h1 {
     border-top: 50px solid greenyellow;
     border-left: 25px solid transparent;
     border-right: 25px solid transparent;
-    padding-bottom: 32px;
+    padding-bottom: 35px;
+    height: 0;
+    width: 0;
     text-align: center;
 }
 
 .inside-u-side-down-p {
     margin: 0;
-    justify-self: center;
-    padding-bottom: 40px;
+    line-height: 1;
+    position: relative;
+    font-size: 16px;
+    padding-bottom: 64px;
+
 }
 
 
-.second-column{
+.second-column {
     justify-content: center;
     padding-left: 5px;
     padding-right: 5px;
     margin-top: 50px;
-  }
-.reg-font{
+}
+
+.reg-font {
     margin: 0;
     justify-self: center;
     padding-top: 20px;
