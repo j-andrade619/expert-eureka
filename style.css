@@ -50,28 +50,35 @@ h1 {
     height: 0;
     width: 0;
 }
-
 .upside-down-triangle {
     display: flex;
-    position: relative; /* Allows absolute positioning for child */
-    width: 0; /* Essential for maintaining triangle shape */
-    height: 0; /* Essential for maintaining triangle shape */
-    border-top: 100px solid yellow; /* Height of the larger triangle */
-    border-left: 50px solid transparent; /* Half of the base width */
-    border-right: 50px solid transparent; /* Half of the base width */
+    position: relative;
+    width: 0;
+    height: 0;
+    border-top: 100px solid yellow;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
 }
 
 .inside-u-side-down {
     display: flex;
-    position: absolute;
-    transform: translate(-50%, -100%); /* Center horizontally and vertically */
-    border-top: 50px solid greenyellow; /* Height of the smaller triangle */
-    border-left: 25px solid transparent; /* Half of the base width */
-    border-right: 25px solid transparent; /* Half of the base width */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: translate(-50%, -100%);
+    border-top: 50px solid greenyellow;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
     padding-bottom: 32px;
-    margin: auto;
     text-align: center;
 }
+
+.inside-u-side-down-p {
+    margin: 0;
+    justify-self: center;
+    padding-bottom: 40px;
+}
+
 
 .second-column{
     justify-content: center;
@@ -79,4 +86,9 @@ h1 {
     padding-right: 5px;
     margin-top: 50px;
   }
+.reg-font{
+    margin: 0;
+    justify-self: center;
+    padding-top: 20px;
+}
 
