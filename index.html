@@ -3,109 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, initial-scale=1.0">
     <title>Drum Machine</title>
     <link rel="stylesheet" href="style.css">
-    <link/>
 </head>
 <body>
 <h1>Welcome to the Party!</h1>
-<div class="drum-machine" class="keys">
-    <div class="flex-column" class="key">
+<div class="drum-machine keys">
+    <!-- Each .key has a data-key attribute -->
+    <div class="flex-column key" data-key="65">
         <div class="right-side-up-triangle">
-            <div data-key = "65" class="inside-r-side-up">
-                <kdb class="reg-font">A</kdb>
+            <div class="inside-r-side-up">
+                <kbd class="reg-font">A</kbd>
             </div>
         </div>
+    </div>
 
+    <div class="flex-column key" data-key="83">
         <div class="upside-down-triangle">
-            <div data-key="83" class="inside-u-side-down">
-                <kdb class="inside-u-side-down-p">S</kdb>
+            <div class="inside-u-side-down">
+                <kbd class="inside-u-side-down-p">S</kbd>
+            </div>
+        </div>
+    </div>
 
+    <div class="flex-column key" data-key="68">
+        <div class="right-side-up-triangle">
+            <div class="inside-r-side-up">
+                <kbd class="reg-font">D</kbd>
             </div>
         </div>
     </div>
-    <div class="second-column" class="key">
+
+    <div class="flex-column key" data-key="70">
         <div class="right-side-up-triangle">
-            <div data-key="68" class="inside-r-side-up">
-                <kdb class="reg-font">D</kdb>
+            <div class="inside-r-side-up">
+                <kbd class="reg-font">F</kbd>
             </div>
         </div>
     </div>
-    <div class="flex-column" class="key">
-        <div class="right-side-up-triangle">
-            <div data-key="70" class="inside-r-side-up">
-                <kdb class="reg-font">F</kdb>
-            </div>
-        </div>
+
+    <div class="flex-column key" data-key="71">
         <div class="upside-down-triangle">
-            <div data-key="71" class="inside-u-side-down">
-                <kdb class="inside-u-side-down-p">G</kdb>
+            <div class="inside-u-side-down">
+                <kbd class="inside-u-side-down-p">G</kbd>
+            </div>
+        </div>
+    </div>
 
+    <div class="flex-column key" data-key="72">
+        <div class="right-side-up-triangle">
+            <div class="inside-r-side-up">
+                <kbd class="reg-font">H</kbd>
             </div>
         </div>
     </div>
-    <div class="second-column" class="key">
+
+    <div class="flex-column key" data-key="74">
         <div class="right-side-up-triangle">
-            <div data-key="72" class="inside-r-side-up">
-                <kdb class="reg-font">H</kdb>
+            <div class="inside-r-side-up">
+                <kbd class="reg-font">J</kbd>
             </div>
         </div>
     </div>
-    <div class="flex-column" class="key">
-        <div class="right-side-up-triangle">
-            <div data-key="74" class="inside-r-side-up">
-                <kdb class="reg-font">J</kdb>
-            </div>
-        </div>
+
+    <div class="flex-column key" data-key="75">
         <div class="upside-down-triangle">
-            <div data-key="75" class="inside-u-side-down">
-                <kdb class="inside-u-side-down-p">K</kdb>
-
+            <div class="inside-u-side-down">
+                <kbd class="inside-u-side-down-p">K</kbd>
             </div>
         </div>
     </div>
-    <div class="second-column" class="key">
+
+    <div class="flex-column key" data-key="76">
         <div class="right-side-up-triangle">
-            <div data-key="76" class="inside-r-side-up">
-                <kdb class="reg-font">L</kdb>
+            <div class="inside-r-side-up">
+                <kbd class="reg-font">L</kbd>
             </div>
         </div>
     </div>
 </div>
-    <audio data-key="65" src="sounds/clap.wav"></audio>
-    <audio data-key="83" src="sounds/hihat.wav"></audio>
-    <audio data-key="68" src="sounds/kick.wav"></audio>
-    <audio data-key="70" src="sounds/openhat.wav"></audio>
-    <audio data-key="71" src="sounds/ride.wav"></audio>
-    <audio data-key="72" src="sounds/snare.wav"></audio>
-    <audio data-key="74" src="sounds/tom.wav"></audio>
-    <audio data-key="75" src="sounds/tink.wav"></audio>
-    <audio data-key="76" src="sounds/boom.wav"></audio>
+
+<!-- Audio Elements -->
+<audio data-key="65" src="sounds/clap.wav"></audio>
+<audio data-key="83" src="sounds/hihat.wav"></audio>
+<audio data-key="68" src="sounds/kick.wav"></audio>
+<audio data-key="70" src="sounds/openhat.wav"></audio>
+<audio data-key="71" src="sounds/ride.wav"></audio>
+<audio data-key="72" src="sounds/snare.wav"></audio>
+<audio data-key="74" src="sounds/tom.wav"></audio>
+<audio data-key="75" src="sounds/tink.wav"></audio>
+<audio data-key="76" src="sounds/boom.wav"></audio>
 
 <script>
-function playSound(e) {
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-    if (!audio) {
-        return;
+    function playSound(e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+        if (!audio) return; // Stop if no corresponding audio
+        audio.currentTime = 0; // Rewind to the start
+        audio.play(); // Play audio
+        key.classList.add("playing"); // Add playing class
     }
-    audio.currentTime = 0;
-    audio.play();
-    key.classList.add("playing");
-}
 
-function removeTransition(e) {
-    if (e.propertyName !== "transform") {
-        return;
+    function removeTransition(e) {
+        if (e.propertyName !== "transform") return;
+        this.classList.remove("playing"); // Remove playing class
     }
-    this.classList.remove("playing");
-}
-const keys = document.querySelectorAll(".key");
-keys.forEach(key => key.addEventListener("transitionend", removeTransition));
-window.addEventListener("keydown", playSound);
+
+    const keys = document.querySelectorAll(".key");
+    keys.forEach(key => key.addEventListener("transitionend", removeTransition));
+    window.addEventListener("keydown", playSound);
 </script>
-
-
 </body>
 </html>

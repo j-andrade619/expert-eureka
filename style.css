@@ -94,6 +94,24 @@ h1 {
     padding-right: 5px;
     margin-top: 50px;
 }
+/* Default key styles */
+.key {
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    border: 4px solid black;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.1s ease, border-color 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* Style applied when key is pressed */
+.key.playing {
+    transform: scale(1.1); /* Slight enlargement */
+    border-color: yellow; /* Highlight border */
+    box-shadow: 0 0 10px yellow; /* Glow effect */
+}
+
 
 .reg-font {
     display: flex;
